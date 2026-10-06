@@ -1,0 +1,241 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f5f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header: 2 Kolom */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2238;
+    color: white;
+    padding: 20px;
+}
+
+.header-left img {
+    height: 50px;
+    background-color: #ddd; /* Placeholder foto */
+}
+
+.header-right {
+    text-align: right;
+}
+
+/* Navigasi: 1 Baris */
+nav {
+    background-color: #3b71f3;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Bagian Utama (Main): 2 Kolom (Kiri dan Kanan) */
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Konten Kiri: 3 Kolom untuk Galeri */
+.konten-kiri {
+    flex: 7;
+}
+
+.konten-kiri h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.galeri-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Efek Opacity & Transisi pada Galeri */
+.kartu-galeri {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.kartu-galeri:hover {
+    transform: scale(1.02);
+    opacity: 0.8; 
+}
+
+.kartu-galeri img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.kartu-galeri h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.kartu-galeri p {
+    font-size: 11px;
+    color: #666;
+}
+
+.kartu-galeri p {
+    font-size: 11px;
+    color: #666;
+    
+    /* Tambahan kode untuk membatasi panjang teks */
+    display: -webkit-box;
+    line-clamp: 3; /* Standar property untuk kompatibilitas */
+    -webkit-line-clamp: 3; /* Angka 3 berarti teks maksimal tampil 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Konten Kanan: 3 Bagian Disusun ke Bawah */
+.konten-kanan {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.sidebar-box h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.sidebar-box ul {
+    list-style: none;
+}
+
+.sidebar-box ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-box ul li a {
+    text-decoration: none;
+    color: #3b71f3;
+    font-size: 14px;
+}
+
+/* Footer: 2 Bagian (Atas 3 Kolom, Bawah 1 Kolom) */
+footer {
+    background-color: #1a2238;
+    color: white;
+}
+
+.footer-atas {
+    display: flex;
+    padding: 30px 20px;
+    justify-content: space-between;
+}
+
+.footer-kolom {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.footer-kolom h4 {
+    margin-bottom: 15px;
+}
+
+.footer-kolom ul {
+    list-style: none;
+}
+
+.footer-kolom ul li, .footer-kolom p {
+    font-size: 13px;
+    color: #bbb;
+    margin-bottom: 8px;
+}
+
+.footer-bawah {
+    text-align: center;
+    padding: 15px;
+    background-color: #111726;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Pop Up Modal (Contact) */
+.modal-overlay {
+    display: none; /* Disembunyikan secara default */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profil-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.profil-tabel td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
